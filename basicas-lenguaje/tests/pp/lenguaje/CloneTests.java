@@ -1,7 +1,9 @@
-package edu.unlam.progava.lenguaje;
+package pp.lenguaje;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
 
 public class CloneTests {
 
@@ -17,14 +19,15 @@ public class CloneTests {
 		Punto dos = uno.clone();
 
 		// x.clone() != x
-		Assert.assertNotSame(uno, dos);
-		Assert.assertFalse(uno == dos);
+		assertNotSame(uno, dos);
+		assertFalse(uno == dos);
 
 		// x.clone().getClass() == x.getClass()
-		Assert.assertSame(uno.getClass(), dos.getClass());
+		assertSame(uno.getClass(), dos.getClass());
 
 		// x.clone().equals(x)
-		Assert.assertEquals(uno, dos);
+		assertEquals(uno, dos);
 	}
 
+	
 }

@@ -1,14 +1,13 @@
-package edu.unlam.progava.lenguaje;
+package pp.lenguaje;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class CamparatorTests {
+import org.junit.jupiter.api.Test;
 
-	// https://docs.oracle.com/javase/10/docs/api/java/util/Comparator.html
+public class ComparatorTests {
 
 	@Test
 	public void comparadorPorEjeX() {
@@ -17,8 +16,8 @@ public class CamparatorTests {
 
 		PuntosPorEjeX comparador = new PuntosPorEjeX();
 
-		Assert.assertTrue(comparador.compare(uno, dos) < 0);
-		Assert.assertTrue(comparador.compare(dos, uno) > 0);
+		assertTrue(comparador.compare(uno, dos) < 0);
+		assertTrue(comparador.compare(dos, uno) > 0);
 
 	}
 
@@ -29,8 +28,8 @@ public class CamparatorTests {
 
 		PuntosPorEjeY comparador = new PuntosPorEjeY();
 
-		Assert.assertTrue(comparador.compare(uno, dos) > 0);
-		Assert.assertTrue(comparador.compare(dos, uno) < 0);
+		assertTrue(comparador.compare(uno, dos) > 0);
+		assertTrue(comparador.compare(dos, uno) < 0);
 	}
 
 	@Test

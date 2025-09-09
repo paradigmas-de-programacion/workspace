@@ -1,7 +1,8 @@
-package edu.unlam.progava.lenguaje;
+package pp.lenguaje;
 
-public class Punto implements Comparable<Punto> {
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
+public class Punto implements Comparable<Punto>, Cloneable {
 	private double x, y;
 
 	public Punto(double x, double y) {
@@ -76,13 +77,12 @@ public class Punto implements Comparable<Punto> {
 
 	// http://commons.apache.org/proper/commons-lang/download_lang.cgi
 
-//	@Override
-//	public String toString() {
-//		return ToStringBuilder.reflectionToString(this);
-//	}
+	public String toStringLang() {
+		return ToStringBuilder.reflectionToString(this);
+	}
 
 	@Override
 	public Punto clone() throws CloneNotSupportedException {
-		return new Punto(this.x, this.y);
-	}	
+		return (Punto) super.clone();
+	}
 }

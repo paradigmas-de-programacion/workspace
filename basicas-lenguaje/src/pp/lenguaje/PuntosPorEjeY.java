@@ -1,4 +1,4 @@
-package edu.unlam.progava.lenguaje;
+package pp.lenguaje;
 
 import java.util.Comparator;
 
